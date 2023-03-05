@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=League+Spartan:wght@400;500;700&family=Poppins:wght@200;400;600&display=swap");
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 400, 500, 700 */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(/images/bg-pattern-top-desktop.svg),
+    url(/images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.container
+{
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.primary
+{
+    display: grid;
+    grid-template-rows: repeat(2, 300px);
+    place-items: center;
+}
+
+.top-grid
+{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    column-gap: 140px;
+    margin-top: 2rem;
+}
+
+.top-left h1
+{
+    font-weight: 700;
+    color:  hsl(300, 43%, 22%);
+    margin-bottom: 1rem;
+    font-size: 2.9rem;
+}
+
+.top-left p
+{
+    color:  hsl(303, 10%, 53%);
+    font-size: 1.1em;
+}
+
+.rating
+{
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.rating:nth-child(2)
+{
+    left: 2rem;
+}
+
+.rating:nth-child(3)
+{
+    left: 4rem;
+}
+
+.rating p
+{
+    margin-left: 20px;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+
+.bottom-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 10px;
+}
+
+.user-review
+{
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 10px;
+    position: relative;
+}
+
+.user-review:nth-child(2)
+{
+    top: 2rem;
+}
+
+.user-review:nth-child(3)
+{
+    top: 4rem;
+}
+
+.user-review p 
+{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+}
+
+.user-details
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.user-details img
+{
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.info
+{
+    font-weight: 500;
+}
+
+.info h5{
+    font-size: 1.1em;
+
+}
+
+.info span{
+    color: hsl(333, 80%, 67%);
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 1074px)
+{
+    .primary
+    {
+        grid-template-rows: 1fr;
+    }
+
+    .top-grid{
+       grid-template-columns: 1fr;
+    }
+
+    .top-right
+    {
+        margin:20px 0;
+    }
+
+    .rating
+    {
+        flex-direction: column;
+    }
+
+    .rating .stars
+    {
+        margin-bottom: 5px;
+    }
+
+    .rating:nth-child(2), .rating:nth-child(3){
+        left: unset;
+    }
+
+    .user-review:nth-child(2), .user-review:nth-child(3)
+    {
+        top: unset;
+    }
+}
